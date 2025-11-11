@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>龍鱗堂｜藍底過背金龍（Blue Base Crossback）専門</title>
+  <meta name="description" content="CITES登録個体のみ取扱い。高品質なアジアアロワナの販売・飼育サポートの専門店『龍鱗堂』の公式サイト。" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1016; --panel:#121922; --text:#e8eef6; --muted:#9fb1c7; --brand:#2dd4bf; --brand-2:#60a5fa; --accent:#f59e0b; --danger:#ef4444;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,#0a0f15, #0b1118 30%, #0f1722);color:var(--text);font-family:'Noto Sans JP', system-ui, -apple-system, Segoe UI, Roboto, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .media img{width:100%;height:100%;object-fit:cover}
+    .credit{font-size:12px;color:var(--muted);margin-top:6px}
+    .media img{width:100%;height:100%;object-fit:cover}
+    .container{width:min(1200px, 92vw);margin-inline:auto}
+    header.site{
+      position:sticky;top:0;z-index:50;background:rgba(10,15,21,.7);backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.04em}
+    .logo-badge{width:40px;height:40px;border-radius:12px;background:radial-gradient(120% 120% at 0% 0%, var(--brand) 0%, var(--brand-2) 60%, #0ea5e9 100%);display:grid;place-items:center;box-shadow:var(--shadow)}
+    .logo-badge svg{filter:drop-shadow(0 4px 6px rgba(0,0,0,.35))}
+    .nav a{opacity:.9;margin-left:18px}
+    .btn{display:inline-grid;place-items:center;padding:12px 18px;border-radius:999px;font-weight:700;box-shadow:var(--shadow);transition:.2s ease;}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#021017}
+    .btn-ghost{border:1px solid rgba(255,255,255,.12)}
+
+    .hero{position:relative;padding:68px 0 48px;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:auto -20% -20% -20%;height:60vh;background:radial-gradient(60% 50% at 60% 0%, rgba(45,212,191,.18), transparent 70%), radial-gradient(40% 30% at 20% 10%, rgba(96,165,250,.16), transparent 70%);pointer-events:none;}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:32px}
+    .hero h1{font-size:clamp(28px, 4vw, 44px);line-height:1.2;margin:0 0 12px;font-weight:800}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .pill{display:inline-flex;gap:8px;align-items:center;color:#031418;background:linear-gradient(135deg,var(--brand),var(--brand-2));padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;width:max-content}
+    .hero-card{border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));box-shadow:var(--shadow)}
+    .hero-card .media{aspect-ratio:4/3;background:linear-gradient(135deg,#05121a,#0b1721);display:grid;place-items:center}
+    .hero-card .media svg{opacity:.9}
+    .hero-card .meta{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-top:1px solid rgba(255,255,255,.06)}
+
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .badge{font-size:12px;color:var(--muted);border:1px dashed rgba(255,255,255,.16);padding:6px 10px;border-radius:999px}
+
+    .section{padding:48px 0}
+    .section h2{font-size:clamp(22px, 3vw, 30px);margin:0 0 16px}
+    .lead{color:var(--muted)}
+
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .grid.cols-4{grid-template-columns:repeat(4, 1fr)}
+    @media (max-width: 960px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid.cols-3, .grid.cols-4{grid-template-columns:repeat(2, 1fr)}
+    }
+    @media (max-width: 640px){
+      .grid.cols-3, .grid.cols-4{grid-template-columns:1fr}
+    }
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .card .media{aspect-ratio: 4/3; background:linear-gradient(135deg,#0d1b26,#08131c)}
+    .card .body{padding:14px 16px}
+    .price{font-weight:800;font-size:18px}
+    .chip{display:inline-block;background:rgba(45,212,191,.14);color:var(--brand);font-weight:700;font-size:12px;padding:3px 8px;border-radius:999px;margin-left:6px}
+
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .feature{padding:18px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01))}
+    .feature h3{margin:0 0 6px;font-size:16px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    .notice{border-left:4px solid var(--accent);padding:12px 14px;background:rgba(245,158,11,.08);border-radius:10px}
+
+    .faq details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:700}
+    .faq p{color:var(--muted)}
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
+    .cols{display:grid;grid-template-columns: 1.5fr 1fr 1fr;gap:18px}
+    @media (max-width: 960px){.cols{grid-template-columns:1fr}}
+    .list a{display:block;opacity:.9;padding:4px 0}
+
+    /* Utility */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+  <template id="img-fallback-template">
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'>
+      <defs>
+        <linearGradient id='g' x1='0' x2='1'>
+          <stop offset='0' stop-color='#0d1b26'/>
+          <stop offset='1' stop-color='#08131c'/>
+        </linearGradient>
+      </defs>
+      <rect width='100%' height='100%' fill='url(#g)'/>
+      <text x='50%' y='50%' fill='#9fb1c7' font-size='24' text-anchor='middle'>画像をアップロードしてください</text>
+    </svg>
+  </template>
+  <script>
+    // Smooth scroll
+    addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          if(id.length > 1){
+            e.preventDefault();
+            document.querySelector(id)?.scrollIntoView({behavior:'smooth'});
+          }
+        })
+      })
+    });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "龍鱗堂",
+    "url": "https://example.com",
+    "image": "https://placehold.co/1200x630/png",
+    "description": "アジアアロワナ専門店（CITES登録個体のみ）",
+    "address": {"@type":"PostalAddress","addressCountry":"JP"},
+    "telephone": "+81-3-0000-0000"
+  }
+    </script>
+  <script>
+    // 画像の遅延読み込み + フォールバック
+    function loadImages(){
+      const placeholder = document.getElementById('img-fallback-template').innerHTML.trim();
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        const src = img.getAttribute('data-src');
+        img.onerror = () => {
+          const svg = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(placeholder);
+          img.removeAttribute('srcset');
+          img.src = svg;
+        };
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        // 一部環境で外部リダイレクトがブロックされる対策
+        setTimeout(() => { img.src = src; }, 0);
+      });
+    }
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', loadImages);
+    }else{ loadImages(); }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site" aria-label="サイトヘッダー">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="龍鱗堂ホーム">
+        <span class="logo-badge" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12c6-8 12 8 18 0-6 8-12-8-18 0Z" fill="#042b2a"/>
+            <path d="M2.5 12c6-8 12 8 19 0-6 8-12-8-19 0Z" stroke="white" stroke-opacity=".85" stroke-width="1.2"/>
+          </svg>
+        </span>
+        <span>龍鱗堂</span>
+      </a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="#products">個体一覧</a>
+        <a href="#about">選ばれる理由</a>
+        <a href="#care">飼育ガイド</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#contact">問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="hero" aria-label="ヒーロー">
+    <div class="container hero-grid">
+      <section>
+        <span class="pill" aria-label="CITES登録済み・正規証明付">CITES登録個体・正規証明付</span>
+        <h1>藍底過背金龍（Blue Base Crossback）を、<br/>最高のコンディションでお届け。</h1>
+        <p class="lead">輸入・検疫・トリートメントまで一貫管理。各個体にマイクロチップと血統証明を付帯し、万全のサポートで安心してお迎えいただけます。</p>
+        <div class="cta" role="group" aria-label="主要アクション">
+          <a class="btn btn-primary" href="#products">在庫を見る</a>
+          <a class="btn btn-ghost" href="#contact">来店予約</a>
+        </div>
+        <div class="badges">
+          <span class="badge">ヘルスチェック済</span>
+          <span class="badge">到着後7日保証</span>
+          <span class="badge">初心者サポート</span>
+        </div>
+        <div class="notice" style="margin-top:14px">
+          <strong>法令遵守について：</strong> アジアアロワナはワシントン条約（CITES）附属書I掲載種です。<br>
+          当店は <u>養殖CITES登録個体のみ</u> を取り扱い、販売時に必要書類をお渡しします。地域の条例・規制をご確認ください。
+        </div>
+      </section>
+      <aside class="hero-card" aria-label="注目の個体">
+        <div class="media" aria-hidden="true">
+          <img data-src="https://cdn.pixabay.com/photo/2023/09/07/23/48/arowana-8240072_1280.jpg" alt="藍底過背金龍（実個体の参考画像）" referrerpolicy="no-referrer">
+          <div class="credit">Photo: Pixabay (free to use). Source: <a href="https://pixabay.com/photos/arowana-fish-8240072/" target="_blank" rel="noopener">arowana-8240072</a></div>
+        </div>
+        <div class="meta">
+          <div>
+            <strong>藍底過背金龍（L）</strong>
+            <div style="color:var(--muted);font-size:14px">個体ID：BBXB-2025-001</div>
+          </div>
+          <a class="btn btn-primary" href="#products">詳細</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Features / Why Us -->
+  <section id="about" class="section container">
+    <h2>龍鱗堂が選ばれる理由</h2>
+    <p class="lead">仕入れ～販売～アフターまで、アロワナに最適化したプロセスを構築。健康で美しい発色、性格の安定を第一に考えています。</p>
+    <div class="features">
+      <div class="feature">
+        <h3>徹底トリートメント</h3>
+        <p>到着後は独立システムで順化・観察。外部寄生虫対策・内科ケアを計画的に実施し、餌付けまで完了させてから販売。</p>
+      </div>
+      <div class="feature">
+        <h3>CITES & マイクロチップ</h3>
+        <p>全個体に固体識別用チップとCITES書類を付帯。合法的に安心して飼育できます。</p>
+      </div>
+      <div class="feature">
+        <h3>専任アフター</h3>
+        <p>水槽立ち上げからフード選定、病気の初期対応までチャット＆電話でサポート。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section id="products" class="section container" aria-label="在庫一覧">
+    <h2>在庫個体</h2>
+    <p class="lead">掲載以外にも入荷予定があります。ご希望の血統・サイズがあればお知らせください。</p>
+    <div class="grid cols-3" role="list">
+      <!-- Card 1 -->
+      <article class="card" role="listitem">
+        <div class="media" aria-hidden="true"><img data-src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Scleropages_formosus_Prague_2012_1.jpg" alt="藍底過背金龍（参考画像）" referrerpolicy="no-referrer"><div class="credit">Photo: Marcel Burkhard (Cele4), CC BY-SA 3.0/GFDL, via Wikimedia Commons</div"="no-referrer"><div class="credit">Photo: Karelj, CC BY-SA 3.0, via Wikimedia Commons</div"="no-referrer"></div>
+        <div class="body">
+          <h3 style="margin:0 0 6px">藍底過背金龍 <span class="chip">推し</span></h3>
+          <p class="lead" style="margin:0 0 8px">個体ID：BBXB-2025-001／全長 約28cm</p>
+          <div class="price">¥358,000</div>
+          <div class="cta" style="margin-top:10px">
+            <a class="btn btn-primary" href="#contact">購入相談</a>
+            <a class="btn btn-ghost" href="#">詳細を見る</a>
+          </div>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="card" role="listitem">
+        <div class="media" aria-hidden="true"><img data-src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Arowana.jpg" alt="過背金龍（参考画像）" referrerpolicy="no-referrer"></div>
+        <div class="body">
+          <h3 style="margin:0 0 6px">過背金龍</h3>
+          <p class="lead" style="margin:0 0 8px">個体ID：XB-2025-004／全長 約25cm</p>
+          <div class="price">¥328,000</div>
+          <div class="cta" style="margin-top:10px">
+            <a class="btn btn-primary" href="#contact">購入相談</a>
+            <a class="btn btn-ghost" href="#">詳細を見る</a>
+          </div>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="card" role="listitem">
+        <div class="media" aria-hidden="true"><img data-src="/images/rtg-019.jpg" alt="紅尾金龍（参考画像）" referrerpolicy="no-referrer"></div>
+        <div class="body">
+          <h3 style="margin:0 0 6px">紅尾金龍</h3>
+          <p class="lead" style="margin:0 0 8px">個体ID：RTG-2025-019／全長 約23cm</p>
+          <div class="price">¥168,000</div>
+          <div class="cta" style="margin-top:10px">
+            <a class="btn btn-primary" href="#contact">購入相談</a>
+            <a class="btn btn-ghost" href="#">詳細を見る</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section container" aria-label="藍底過背金龍ギャラリー">
+    <h2>フォトギャラリー（ローカル画像に差し替え）</h2>
+    <p class="lead">実個体の撮影画像に差し替え可能です。暫定でフリー素材を表示しています。</p>
+    <div class="grid cols-3">
+      <div class="card"><div class="media"><img data-src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Scleropages_formosus_Prague_2012_1.jpg" alt="藍底過背金龍（青みのある体色）" referrerpolicy="no-referrer"></div></div>
+      <div class="card"><div class="media"><img data-src="https://cdn.pixabay.com/photo/2023/09/07/23/48/arowana-8240072_1280.jpg" alt="アジアアロワナ（参考）" referrerpolicy="no-referrer"></div></div>
+      <div class="card"><div class="media"><img data-src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Arowana.jpg" alt="ドラゴンフィッシュ（参考）" referrerpolicy="no-referrer"></div></div>
+    </div>
+    <p class="lead" style="margin-top:10px">※ 表示画像は `/images/` 配下のファイルを読み込む設定に変更しました。提供元の許諾・ライセンスに基づき、適切なクレジット表記をご記載ください。以下は例：Pixabayは帰属不要、WikimediaはCC BY-SA/GFDLに基づくクレジット表記が必要です。</p>
+  </section>
+
+  <!-- Care Guide -->
+  <section id="care" class="section container">
+    <h2>飼育ガイド</h2>
+    <div class="grid cols-3">
+      <div class="card"><div class="body">
+        <h3>水槽サイズ</h3>
+        <p class="lead">単独飼育で120×60×60cm以上を推奨。将来的な成長を見越した余裕ある水量を確保。</p>
+      </div></div>
+      <div class="card"><div class="body">
+        <h3>水質管理</h3>
+        <p class="lead">pH 6.5–7.2、28–30℃。強力な外部濾過＋ウール交換を週1回、30–40%の換水を推奨。</p>
+      </div></div>
+      <div class="card"><div class="body">
+        <h3>給餌</h3>
+        <p class="lead">人工飼料に馴らした個体を販売。甲殻類や練り餌は週2回まででバランス良く。</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section container" aria-label="お客様の声">
+    <h2>お迎えいただいたお客様の声</h2>
+    <div class="grid cols-3">
+      <div class="card"><div class="body">
+        <p>「到着時の状態が素晴らしく、すぐに人工飼料を食べてくれました。サポートも丁寧で安心でした。」</p>
+        <p style="color:var(--muted)">— 神奈川県・S様</p>
+      </div></div>
+      <div class="card"><div class="body">
+        <p>「CITESやマイクロチップの説明が明確で、法的にも安心して飼育を始められました。」</p>
+        <p style="color:var(--muted)">— 大阪府・K様</p>
+      </div></div>
+      <div class="card"><div class="body">
+        <p>「色揚がりが早く、泳ぎも力強い。トリートメントの質の違いを感じます。」</p>
+        <p style="color:var(--muted)">— 愛知県・M様</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section container faq">
+    <h2>よくある質問</h2>
+    <details>
+      <summary>配送は可能ですか？</summary>
+      <p>全国空港止めまたは生体専門便で対応します。気温や個体の状態を最優先し、最適な便を選定します。</p>
+    </details>
+    <details>
+      <summary>保証内容を教えてください。</summary>
+      <p>到着後7日間の健康保証（初期不良）が適用されます。水質・水温・設備条件等の確認を行います。</p>
+    </details>
+    <details>
+      <summary>必要な書類は付きますか？</summary>
+      <p>養殖個体の <strong>CITES許可</strong> と <strong>マイクロチップ番号</strong> の書類をお渡しします。地域条例の確認はお客様にてお願いします。</p>
+    </details>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section container" aria-label="問い合わせ">
+    <h2>お問い合わせ・来店予約</h2>
+    <p class="lead">在庫確認・取り寄せ依頼・水槽立ち上げ相談など、お気軽にご連絡ください。</p>
+    <form class="card" onsubmit="event.preventDefault(); alert('送信ありがとうございました。折り返しご連絡します。');">
+      <div class="body" style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+        <label>お名前<br><input required name="name" placeholder="例：山田 太郎" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.15);color:var(--text)"></label>
+        <label>メールアドレス<br><input type="email" required name="email" placeholder="例：example@mail.com" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.15);color:var(--text)"></label>
+        <label style="grid-column:1/-1">件名<br><input name="subject" placeholder="例：スーパーレッドの在庫について" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.15);color:var(--text)"></label>
+        <label style="grid-column:1/-1">内容<br><textarea name="message" rows="5" placeholder="ご希望の個体・サイズ・ご予算など" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(0,0,0,.15);color:var(--text)"></textarea></label>
+        <div class="cta" style="grid-column:1/-1">
+          <button class="btn btn-primary" type="submit">送信する</button>
+          <a class="btn btn-ghost" href="tel:+81300000000">電話で相談</a>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container cols">
+      <div>
+        <div class="logo" style="margin-bottom:10px">
+          <span class="logo-badge" aria-hidden="true"></span>
+          <strong>龍鱗堂</strong>
+        </div>
+        <p>アジアアロワナ専門店。CITES登録の養殖個体のみ取扱い。</p>
+        <p style="margin-top:8px">〒000-0000 東京都〇〇区〇〇 1-2-3／営業時間 12:00–20:00（水曜定休）</p>
+      </div>
+      <div class="list">
+        <strong>メニュー</strong>
+        <a href="#products">在庫個体</a>
+        <a href="#about">選ばれる理由</a>
+        <a href="#care">飼育ガイド</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <strong>ポリシー</strong>
+        <p class="lead">当店は法律・条約を遵守し、必要書類のない個体の取り扱いは一切行いません。</p>
+        <p class="lead">© <span id="year"></span> 龍鱗堂</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
